@@ -102,7 +102,7 @@ public class playwrightTest {
 
         //7. TestCase Your Shopping Cart
         videoPage.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Remove product JBL Quantum")).click();
-        assertThat(videoPage.getByLabel("main").getByRole(AriaRole.HEADING)).containsText("Your cart is empty");
+        assertThat(videoPage.getByLabel("main").getByRole(AriaRole.HEADING).first()).containsText("Your cart is empty");
         context.close();
     }
 }
