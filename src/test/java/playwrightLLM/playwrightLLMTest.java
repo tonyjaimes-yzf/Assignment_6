@@ -48,7 +48,7 @@ public class playwrightLLMTest {
         System.out.println("\n=== SETUP: Launching Chromium Browser ===");
         playwright = Playwright.create();
         browser = playwright.chromium().launch(
-                new BrowserType.LaunchOptions().setHeadless(false)
+                new BrowserType.LaunchOptions().setHeadless(true)
         );
     }
 
